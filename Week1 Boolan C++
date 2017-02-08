@@ -61,16 +61,40 @@ Const must be initialized
   	char * const a = NULL;
   
 7. Constructor
+  constructor's name is as same as class name
+  no return value
+  cannot be const
   a.default argument
-  
+  class complex{
+  public:
+  	complex ( double r=0, double i=0){}
+  private: double re,im;
+  }
   b.initialization list
-  
+  class complex{
+  public:
+  	complex ( double r=0, double i=0) : re(r), im(i){}
+  private: double re,im;
+  }
   c.assignments
-  
-  d.overloading
-  
-  e.constructor in private
-    Singleton
+   public:
+  	complex ( double r=0, double i=0) : re(r), im(i){ re =rl im =i;}
+   private: double re,im;
+  } 
+  d.constructor overloading
+   public:
+  	complex ( double r=0, double i=0) : re(r), im(i){ re =rl im =i;}
+	complex () : re(0), im(0) {}
+   private: double re,im;
+  }  
+  e. const member functions
+   public:
+  	complex ( double r=0, double i=0) : re(r), im(i){ re =rl im =i;}
+	complex () : re(0), im(0) {}
+	double real () const { return re;}
+	double imag () const { return im;}
+   private: double re,im;
+  }  
     
 8. pass by value vs pass by refernce
 
@@ -85,5 +109,9 @@ Const must be initialized
     b Polymorphism
     c.Inheritance
     d Encapsulation
+13. Two categories in Class
+    class without pointer members
+    class with pointer member
+   
 
 
