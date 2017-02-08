@@ -4,34 +4,76 @@ Week1
 #ifndef __XXX__
 #def __XXX__
 
-class declaration
-class body
+  class declaration
+  class body
 
 #endif
 
 2. template 
-template <typname T>
 
+template <typename T> T abc(T a, T b)
+{
+	return (a+b);
+}
 
 3. Inline vs Marco
+
+#define ADD(a,b) (a+b)
+
+inline int ADD(int a, int b)
+{
+	return (a+b);
+}
+Similarity:
+  save function excess time
+Different:
+  a.inline function are parsed and expanded by the complier, whereas macros are just textual substitution and expanded by the preprocessor
+  b.inline functions can be overloaded
+  c.Based on my experince, macros are used for code reuse wherars the inline function are used to  during function call.
+  
 4. Public, private, protect
+
+   Public: are accessible by anywhere.
+   Private: are accessible only from the same class or from friends
+   protected: are accessible from the same class or from friends or drived classess
+   
 5. friend
+
 6. Const
   a. const variable
+  
   b. const functions
+  
   c. const member functions
+  
   d. const member variable
+  
   e. const class
+  
 7. Constructor
-  a. default argument
+  a.default argument
+  
   b.initialization list
+  
   c.assignments
+  
   d.overloading
+  
   e.constructor in private
     Singleton
+    
 8. pass by value vs pass by refernce
+
 9. return by value vs return by reference
+
 10. Operator overloading member function
+
 11. Operator overloading non-member function
+
+12. Features of OOP
+    a.Abstraction
+    b Polymorphism
+    c.Inheritance
+    d Encapsulation
 
 
