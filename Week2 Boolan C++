@@ -2,12 +2,32 @@ Week2
 
 1.Big Three
    a. copy constructor
-   
+   if no define, the complier will have a synthesized copy constructor wihch is a Shallow Copy
+   inline String :: String(const String& str)
+   {
+  
+      m_data = new char[strlen(str.m_data +1)]
+      strcpy(m_data, str.m_data);
+
+      
+   }
    b. copy assignment operator
-   
+   have self assignment, othwise the data pointed by member poionter will be deleted 
+   copy asignment operator must copy member data from parent's class
+   inline String& String::operator=(const String& str)
+   {
+      if (this == &str) return *this;//self assigment
+      delte[] m_data;
+      m_data = new char[strlen(str.m_data +1)]
+      strcpy(m_data, str.m_data);
+      return *this;
+      
+   }
    c. destructor
-   
-   
+      cannot be overloaded
+      one class one destructor
+      first excute function body, then destroy data member
+             
 2. If class with pointer, you must define Big three
 
 3. Memory management
