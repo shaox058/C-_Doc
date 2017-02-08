@@ -9,6 +9,29 @@ class body
 
 #endif
 
-2. template <typname T>
+2. template 
+template <typname T>
 
-3.
+
+3. Inline vs Marco
+4. Public, private, protect
+5. friend
+6. Const
+  a. const variable
+  b. const functions
+  c. const member functions
+  d. const member variable
+  e. const class
+7. Constructor
+  a. default argument
+  b.initialization list
+  c.assignments
+  d.overloading
+  e.constructor in private
+    Singleton
+8. pass by value vs pass by refernce
+9. return by value vs return by reference
+10. Operator overloading member function
+11. Operator overloading non-member function
+
+
