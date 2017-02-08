@@ -1,0 +1,14 @@
+Week1
+
+1. Header Guard
+#ifndef __XXX__
+#def __XXX__
+
+class declaration
+class body
+
+#endif
+
+2. template <typname T>
+
+3.
