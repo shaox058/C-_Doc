@@ -1,2 +1,32 @@
+Week2 
 
-fgfgfg
+1.Big Three
+   a. copy constructor
+   
+   b. copy assignment operator
+   
+   c. destructor
+   
+   
+2. If class with pointer, you must define Big three
+
+3. Memory management
+    a. three steps for new
+      <1>. CALL MALLOC
+          void * mem = operator new (sizeof(XX))
+      <2>. TYPE CONVERSION 
+          ps = static_cast<XX *>(mem);
+      <3>.CONSTRUCTOR 
+          ps->XX::XX(); 
+    b. two steps for delete
+       <1>. XX::~XX(ABC);//destructor
+       <2>. operator delete(ABC); //FREE mem
+    
+    c. After array new, must have array delte, otherwise memory leak
+        string * p = new string[100];
+         ...
+         delete[] p;//Call 100 times destructor
+4. Stack and heap
+   Stack: a memory sapce/lifecycle within a scope
+
+   Heap: a global block or some blocks allocated dynamiclly by OS
