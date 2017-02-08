@@ -38,17 +38,27 @@ Different:
    protected: are accessible from the same class or from friends or drived classess
    
 5. friend
-
+   A function defined outside the class' scopt but has access all private and protected members of the class
+   
 6. Const
+Const must be initialized
   a. const variable
-  
-  b. const functions
-  
-  c. const member functions
-  
-  d. const member variable
-  
-  e. const class
+ 	 const int a = 1；
+  b. const member functions
+     class A{ void a() const;} 
+     const functions does not allow to modify the object on which they are called
+     
+  c. const member variable
+     class A{ const int a;} 
+     const member variable cannot be changed
+     
+  d. const object
+  	const object can not invoke non-const member function
+	
+  e. Pointor to const
+  	const int *a = NULL;
+  f. Const pointor
+  	char * const a = NULL;
   
 7. Constructor
   a.default argument
