@@ -96,20 +96,30 @@ Const must be initialized
    private: double re,im;
   }  
     
-8. pass by value vs pass by refernce
+8. pass by value vs pass by reference
+pass by reference 
+the address of outside function and the variable of inside function which is modifed are same.
+So pass by reference can change the variable which is modified after the function call.
+
+pass by value
+the address of outside function and the variable of inside function which is modifed are different.
+So pass by reference cannot change the variable which is modified after the function call.
 
 9. return by value vs return by reference
+return by value
+When a value is returned by value, a copy of that value is returned to the caller.
 
-10. Operator overloading member function
+return by reference
+Returning by address involves returning the address of a variable to the caller.
 
-11. Operator overloading non-member function
+10. Operator overloading 
 
-12. Features of OOP
+11. Features of OOP
     a.Abstraction
     b Polymorphism
     c.Inheritance
     d Encapsulation
-13. Two categories in Class
+12. Two categories in Class
     class without pointer members
     class with pointer member
    
