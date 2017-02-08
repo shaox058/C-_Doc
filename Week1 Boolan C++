@@ -55,9 +55,9 @@ Const must be initialized
   d. const object
   	const object can not invoke non-const member function
 	
-  e. Pointor to const
+  e. Pointer to const
   	const int *a = NULL;
-  f. Const pointor
+  f. Const pointer
   	char * const a = NULL;
   
 7. Constructor
