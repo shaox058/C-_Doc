@@ -1,1 +1,37 @@
+Object Oriendted Programming, Object Oriented Design
+1. Inheritance
 
+  Inheritance <=> is-a
+  
+  non-virtual function: don't want to derived class override it
+  virtual function: want to derived class override it and has the default defination
+  pure virtual function:  derived class must override it and no default defination
+  
+  class Shape{
+  public:
+   virtual void draw() const =0;--> pure virtual
+   virtual void error(const std :: string & msg);--> impure virtual
+   int objectID() const;-->non-virtual
+   ...
+  };
+  
+  Example: Template Method
+  define a skeleton of an algorithm in a base class and Derived classes implement methods
+  
+2. Composition
+  Composition <=> has-a
+  Example: Adapter
+  It allows the interface of an existing class to be used as another interface.
+  
+3. Delegation
+  Composition by reference
+  Example: pImpl(pointer implementation)
+  
+4. Inheritance + Composition
+   Constructor calls Base's constructor first and then derived class
+   Destructor calls druved class's constructor first and then base's constructor
+   
+5. Delegation + Inheritance
+   Example : Observer
+   
+   maintains a list of its dependent and notify them automatically  of any state changes
