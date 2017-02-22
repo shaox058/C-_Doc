@@ -1,0 +1,15 @@
+1. Conversion function
+2. Non-explicit-one-argument ctor
+3. Explicit-one-argument ctor
+4. Explicit-one-argument ctor
+5. Pointer-like classes
+6. Function-like classes
+7. Namespace
+8. class template
+9. function template
+10.member template
+11.specializtion
+12.partial specializtion
+13.template template parameter
+14.Auto
+16.ranged-base for
