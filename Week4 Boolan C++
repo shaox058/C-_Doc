@@ -30,17 +30,98 @@ class Fraction{
 };
 
 4. Explicit-one-argument ctor
+
    In order to aovid ambiguous, the compiler can use constructors callable with a single parameter to convert 
    from one type to another in order to get the right type for a parameter.
    
 5. Pointer-like classes
+   a. overload operator *
+   b. overload operator ->
+   c. overload operator ++
+   d. overload operator --
+   
 6. Function-like classes
+   overload operator()
+   
 7. Namespace
+   A namespace is a region that provides a scope to the identifiers
+   
 8. class template
+template<typename T>
+class complex
+{
+public:
+    complex(T r=0,T i=0)
+    :re(r),im(i)
+    {}
+    complex& operator +=(const complex&);
+    T real () const { return re; }
+    T imag () const { return im; }
+private:
+    T re,im;
+    friend complex& _doapl(complex*,const complex&);
+};
+
 9. function template
+class stone
+{
+public:
+    stone(int w,int h,int we)
+    :_w(w),_h(h),_weight(we)
+    {}
+    bool operator< (const stone& rhs) const
+    { return _weight < rhs._weight; }
+private:
+    int _w,_h,_weight;
+}
+template<class T>
+inline
+const T& min(const T& a,const T& b)
+{
+    return b<a?b:a;
+}
 10.member template
+template <class T1, class T2>
+struct pair
+{
+    typedef T1 first_type;
+    typedef T2 second_type;
+
+    T1 first;
+    T2 second;
+
+    pair()
+        :first(T1()), second(T2()) 
+    { }
+    pair(const T1& a, const T2& b)
+        :first(a), second(b)
+    { }
+    
+    //member template
+    template <class U1, class U2>
+    pair(const pair<U1, U2>& p)
+        :first(p.first), second(p.second)
+    { }
+};
+
 11.specializtion
+
 12.partial specializtion
+
 13.template template parameter
-14.Auto
-16.ranged-base for
+template< typename T, 
+            template< typename T>
+            class SmartPtr;
+        >
+class XCls
+{
+public:
+    XCls(): sp(new T) { }
+private:
+    SmartPtr<T> sp;
+};
+
+XCls<string, auto_ptr> p1;
+XCls<long, shared_ptr> p2;
+
+
