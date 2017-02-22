@@ -3,7 +3,8 @@
     vtbl is a lookup table of function pointers used to dynamically bind the virtual functions to objects at runtime
 
 2. THIS
-
+   THIS is the address of the object on which the member function is being called.
+   
 3. Dynamic Binding
   a.Dynamic binding occurs when a pointer or reference is associated with a member function based on the
     dynamic type of the object.
