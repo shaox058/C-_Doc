@@ -1,1 +1,67 @@
+1. vptr and vtbl
 
+2. THIS
+
+3. Dynamic Binding
+
+4. Const
+                        const object        non-const object
+ const member func         Yes                 Yes
+ non const member func     No                  Yes
+ 
+5. overload ::operator new
+void* operator new(size_t size)
+{
+    //...
+}
+
+6. overload ::operator delete
+void operator delete(void* ptr)
+{
+    //...
+}
+
+7. overload ::operator new[]
+void* operator new[](size_t size)
+{
+    //...
+}
+
+8. overload ::operator delete[]
+void operator delete[](void* ptr)
+{
+    //...
+}
+
+9. overload member new/delete
+class Foo
+{
+public:
+    ...
+    void* operator new(size_t size)
+    {
+        //...
+    }
+    void operator delete(void* ptr)
+    {
+        //...
+    }
+    ...
+};
+
+10. overload member new[]/delete[]
+
+class Foo
+{
+public:
+    ...
+    void* operator new[](size_t size)
+    {
+        //...
+    }
+    void operator delete[](void* ptr)
+    {
+        //...
+    }
+    ...
+};
