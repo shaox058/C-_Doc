@@ -1,7 +1,38 @@
 1. Conversion function
+   operator <typename>() const {...}
+   It converts from the type of its class to another specified type
+   a. no return value
+   b. no argrument
+   
 2. Non-explicit-one-argument ctor
-3. Explicit-one-argument ctor
+   It converts from the type of another specified type class to its class
+   a. non-explicit
+   b. one agrument's ctor
+   
+3. Conversion function vs non-explicit-one-argument ctor
+
+class Fraction{
+    public:
+        //non-explicit-one-argument ctor
+        Fraction(int num, int den = 1) : m_numerator(num), m_denominator(den) { }
+        //conversion function
+        operator double() const {
+            return (double) (m_numerator / m_denominator);
+        }
+
+        Fraction operator +(const Fraction & f)  {
+            return Fraction(f.m_numerator, m_denominator);
+                                                         
+        }
+    private:
+        int m_numerator;
+        int m_denominator;
+};
+
 4. Explicit-one-argument ctor
+   In order to aovid ambiguous, the compiler can use constructors callable with a single parameter to convert 
+   from one type to another in order to get the right type for a parameter.
+   
 5. Pointer-like classes
 6. Function-like classes
 7. Namespace
