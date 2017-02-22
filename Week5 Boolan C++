@@ -1,9 +1,14 @@
 1. vptr and vtbl
+    vptr is a hidden pointer added by the Compiler to the base class. And this pointer is pointing to the virtual table of that particular class.
+    vtbl is a lookup table of function pointers used to dynamically bind the virtual functions to objects at runtime
 
 2. THIS
 
 3. Dynamic Binding
-
+  a.Dynamic binding occurs when a pointer or reference is associated with a member function based on the
+    dynamic type of the object.
+  b.Dynamic binding occurs at run time
+  c.Must override a virtual function declared in a direct or indirect base class.
 4. Const
                         const object        non-const object
  const member func         Yes                 Yes
