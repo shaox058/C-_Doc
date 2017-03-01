@@ -1,1 +1,26 @@
-
+1.STL six components:
+  a. Containers
+    a.1 array
+    a.2 vector
+    a.3 list
+    a.4 forward_list
+    a.5 slist
+    a.6 deque
+    a.7 stack
+    a.8 queue
+    a.9 multiset
+    a.10 multimap
+    a.11 undordered_multiset
+    a.12 unordered_multimap
+    a.13 set
+    a.14 mao
+    a.15 unordered_set
+    a.16 unordered_map
+    a.17 hash_set
+    a.18 hash_map
+    a.19 hash_multiset
+    a.20 hash_multimap  
+  b. Allocators
+  c. Algorithms
+  d. Iterators
+  e. Functors
