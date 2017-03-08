@@ -4,6 +4,15 @@
  GP intends to seprate datas and methods
 2. Operator Overloading
 
+When an operator appears in an expression, and at least one of its operands has a class type or an enumeration type, 
+then overload resolution is used to determine the user-defined function to be called among all the functions 
+estrictions
+The operators :: (scope resolution), . (member access), .* (member access through pointer to member), and ?: (ternary conditional) cannot be overloaded.
+New operators such as **, <>, or &| cannot be created.
+The overloads of operators && and || lose short-circuit evaluation.
+The overload of operator -> must either return a raw pointer or return an object (by reference or by value), for which operator -> is in turn overloaded.
+It is not possible to change the precedence, grouping, or number of operands of operators.(http://en.cppreference.com/w/cpp/language/operators)
+
 3. Class Template
 template <typename T>
 class complex{
@@ -17,7 +26,6 @@ inline
 const T& min(const T& a, const T& b){
  return b < a ? b : a;
 }
-
 5. Allocator
 6. Sequence Containers
   a. array
@@ -38,11 +46,7 @@ const T& min(const T& a, const T& b){
   h.hash_map
   i.hash_multiset
   j.hash+multimap
- 8. list
-  
- 9. vector
- 
- 10.forward_list
+
  
  
   
