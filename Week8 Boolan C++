@@ -1,1 +1,16 @@
 
+Week8 
+
+1. Stack and Queue
+  no iterator
+  queue不可选择vector作为底层结构
+  stack可选择vector作为底层结构
+  stack和queue都不可选择set或map做底层机构
+2.rb_tree(红黑树)
+3.set and multiset
+  set/multiset是以rb_tree为底层结构
+  set元素的key必须独一无二
+  multiset元素的key可以重复
+4.map and multimap
+  map元素的key必须独一无二
+  multimap元素的key可以重复
